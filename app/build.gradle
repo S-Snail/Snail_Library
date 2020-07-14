@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -11,11 +15,40 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+    //签名
+    signingConfigs {
+        debug {
+
         }
+        release {
+            storeFile file('../build_config/xxx.jks')
+            keyAlias 'consultant'
+            storePassword 'xiujia123456'
+            keyPassword 'xiujia123456'
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "IS_DEBUG", "true"
+
+            versionNameSuffix "-debug"
+            signingConfig signingConfigs.release
+        }
+        release {
+            buildConfigField "boolean", "IS_DEBUG", "false"
+
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
     }
 }
 
