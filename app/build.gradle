@@ -21,12 +21,12 @@ android {
         debug {
 
         }
-        release {
-            storeFile file('../build_config/xxx.jks')
-            keyAlias 'consultant'
-            storePassword 'xiujia123456'
-            keyPassword 'xiujia123456'
-        }
+//        release {
+//            storeFile file('../build_config/xxx.jks')
+//            keyAlias 'consultant'
+//            storePassword 'xiujia123456'
+//            keyPassword 'xiujia123456'
+//        }
     }
 
     buildTypes {
