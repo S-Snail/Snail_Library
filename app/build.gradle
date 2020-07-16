@@ -50,6 +50,15 @@ android {
 //            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 //        }
     }
+
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            // apk_渠道名-版本号-版本名称-编译时间.apk
+            def fileName = "snail_library-${defaultConfig.versionName}-${releaseTime()}.apk"
+            outputFileName = fileName
+        }
+    }
 }
 
 dependencies {
