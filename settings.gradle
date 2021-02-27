@@ -1,3 +1,4 @@
 include ':base'
 include ':app'
+include ':base_libs'
 rootProject.name='Snail_Library'
