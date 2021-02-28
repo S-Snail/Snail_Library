@@ -29,7 +29,7 @@ android {
             name = 'mavenCentralSnapshotsDeployer'
             repository(url: "http://127.0.0.1:8081/repository/maven-snapshots/")
                     {
-                        authentication(userName: "admin", password: "LZC123354")
+                        authentication(userName: "admin", password: "admin123")
                     }
             pom.version = "1.0.0" + "-SNAPSHOT"
             pom.artifactId = "base"
