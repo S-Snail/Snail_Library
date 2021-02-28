@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RectangleLayout">
+        <!--边框宽度-->
+        <attr name="strokeWidth" />
+        <!--边框颜色-->
+        <attr name="strokeColor" />
+        <!--背景色，填充色，注：用渐变色的时候不要传solidColor-->
+        <attr name="solidColor" format="color" />
+        <!--背景色，渐变开始颜色-->
+        <attr name="solidStartColor" format="color" />
+        <!--背景色，渐变结束颜色-->
+        <attr name="solidEndColor" format="color" />
+        <!--背景色，渐变方向-->
+        <attr name="solidOrientation">
+            <enum name="TOP_BOTTOM" value="1" />
+            <enum name="TR_BL" value="2" />
+            <enum name="RIGHT_LEFT" value="3" />
+            <enum name="BR_TL" value="4" />
+            <enum name="BOTTOM_TOP" value="5" />
+            <enum name="BL_TR" value="6" />
+            <enum name="LEFT_RIGHT" value="7" />
+            <enum name="TL_BR" value="8" />
+        </attr>
+        <!--圆角,设置后，上下左右单独设置无效-->
+        <attr name="radius" format="dimension" />
+        <!--圆角-左上-->
+        <attr name="topLeftRadius" format="dimension" />
+        <!--圆角-右上-->
+        <attr name="topRightRadius" format="dimension" />
+        <!--圆角-左下-->
+        <attr name="bottomLeftRadius" format="dimension" />
+        <!--圆角-右下-->
+        <attr name="bottomRightRadius" format="dimension" />
+    </declare-styleable>
+</resources>
