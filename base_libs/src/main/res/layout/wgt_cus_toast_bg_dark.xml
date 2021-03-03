@@ -9,6 +9,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/cus_solid_black_r4"
         android:padding="10dp"
-        android:textColor="@color/zx_white" />
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
